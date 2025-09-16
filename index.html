@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Quiz</title>
+  <script src="https://unpkg.com/quizdown@latest/public/build/quizdown.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/quizdown@latest/public/styles/quizdown.css">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 20px; }
+    button {
+      margin-top: 20px; padding: 10px 20px;
+      font-size: 16px; border: none; border-radius: 6px;
+      background-color: #007bff; color: white; cursor: pointer;
+    }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>📘 Sample Quiz</h1>
+
+  <quizdown>
+  # Question 1
+  What is the capital of France?
+
+  - [ ] Berlin
+  - [x] Paris
+  - [ ] Madrid
+  - [ ] Rome
+
+  # Question 2
+  Which of these are programming languages?
+
+  - [x] Python
+  - [x] C++
+  - [ ] Banana
+  - [x] Rust
+  </quizdown>
+
+  <button onclick="submitAnswers()">Submit Answers</button>
+
+  <script>
+    // Initialize quiz rendering
+    quizdown.init();
+
+    // Submit answers to Formspree
+    async function submitAnswers() {
+      const results = quizdown.getAllResults();
+
+      try {
+        const response = await fetch("https://formspree.io/f/YOUR-ENDPOINT", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(results)
+        });
+
+        if (response.ok) {
+          alert("✅ Answers submitted successfully!");
+        } else {
+          alert("❌ Submission failed. Please try again.");
+        }
+      } catch (error) {
+        alert("⚠️ Network error: " + error.message);
+      }
+    }
+  </script>
+</body>
+</html>
