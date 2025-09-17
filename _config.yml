@@ -63,7 +63,13 @@ exclude:
 #    output: true
 #    permalink: /:collection/:path/
 
-page_width: 1200px
+collections:
+  quizzes:
+    output: true
+    permalink: /:collection/:name/
+
+
+#page_width: 1200px
 
 destination:      ./_site
 #incremental:      false
@@ -78,5 +84,5 @@ plugins:
   - jekyll-youtube
 
 
-syntax_highlighter_style: colorful
-highlighter: coderay
+#syntax_highlighter_style: colorful
+#highlighter: coderay
