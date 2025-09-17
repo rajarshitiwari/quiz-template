@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ '/assets/css/quiz.css' | relative_url }}">
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+
+  <!-- student info -->
+  <div class="input-field">
+    <label for="studentEmail">Your Email:</label>
+    <input type="email" id="studentEmail" placeholder="name@example.com" required>
+  </div>
+
+  <!-- raw markdown content will be injected here -->
+  <div id="quiz-root">
+    {{ content }}
+  </div>
+
+  <footer>
+    <button id="downloadBtn" class="btn secondary">⬇️ Download Answers</button>
+    <button id="submitBtn" class="btn">Submit Answer</button>
+  </footer>
+
+  <div id="statusBox" class="status"></div>
+  <div id="resultBox" class="result"></div>
+
+  <script src="{{ '/assets/js/quiz.js' | relative_url }}"></script>
+</body>
+</html>
