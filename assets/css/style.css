@@ -1,0 +1,67 @@
+/* General layout */
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 12px;
+  background: #f9fafb;
+  color: #111827;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+/* Quiz grid */
+.questions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+@media (min-width: 900px) {
+  .questions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .questions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Question blocks */
+.question-block {
+  background: #abd68f;
+  border: 3px solid #e5e7eb;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.3s ease;
+}
+.q-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.question-block input[type="radio"],
+.question-block input[type="checkbox"] {
+  margin-right: 6px;
+}
+.question-block li {
+  list-style: none;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.btn {
+  background: #0d8822;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size:
+}

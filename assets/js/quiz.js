@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = ""; // "https://formspree.io/f/----";
+const FORM_ENDPOINT = "https://formspree.io/f/xovnoekr"; // "https://formspree.io/f/----";
 
 async function loadQuizFile(file) {
   const r = await fetch(file);
@@ -83,15 +83,34 @@ function collectAnswers(qs) {
 function gradeQuiz(ans) {
   let score = 0;
   ans.forEach((q, qi) => {
-    const allCorrect = q.options.every((o) => o.checked === o.correct);
-    if (allCorrect) score++;
-    const b = document.querySelector(
+    let allCorrect = true;
+    const block = document.querySelector(
       `.question-block[data-q-index="${qi}"]`
     );
-    b.style.borderColor = allCorrect ? "green" : "red";
+    const inputs = Array.from(block.querySelectorAll("input"));
+
+    inputs.forEach((inp) => {
+      const isCorrect = inp.dataset.correct === "1";
+      if (inp.checked && !isCorrect) {
+        inp.parentElement.style.color = "red"; // picked wrong
+        allCorrect = false;
+      } else if (!inp.checked && isCorrect) {
+        inp.parentElement.style.color = "orange"; // missed correct
+        allCorrect = false;
+      } else if (isCorrect) {
+        inp.parentElement.style.color = "green"; // correct answer
+      } else {
+        inp.parentElement.style.color = "inherit";
+      }
+    });
+
+    if (allCorrect) score++;
+    block.style.borderColor = allCorrect ? "green" : "red";
   });
   return { score, total: ans.length };
 }
+
+
 
 async function submitQuiz(payload) {
   const box = document.getElementById("statusBox");
@@ -118,6 +137,14 @@ async function submitQuiz(payload) {
 }
 
 // Event handlers
+// Hide submit button if no endpoint
+document.addEventListener("DOMContentLoaded", () => {
+  const submitBtn = document.getElementById("submit-btn");
+  if (!FORM_ENDPOINT || FORM_ENDPOINT.trim() === "") {
+    submitBtn.style.display = "none";
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   const md = await loadQuizFile(window.QUIZ_FILE);
   window.questions = parseQuizMD(md);
