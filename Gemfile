@@ -12,3 +12,4 @@ gem 'jekyll-youtube'
 gem 'jemoji'
 gem 'webrick'
 gem "kramdown-syntax-coderay"
+gem "minima"

@@ -7,9 +7,6 @@ title: Course Quizzes
 
 Welcome! Choose a quiz below:
 
-<ul>
-{% assign sorted = site.quizzes | sort: "title" %}
-{% for quiz in sorted %}
-  <li><a href="{{ quiz.url | relative_url }}">{{ quiz.title }}</a></li>
-{% endfor %}
-</ul>
+- [Quiz 1](quiz-01.html)
+- [Quiz 2](quiz-02.html)
+- [Quiz 3](quiz-03.html)
