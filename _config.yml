@@ -4,7 +4,7 @@ longtitle:        ICHEC Web Quiz setup
 author:           ICHEC Quantum Team
 email:            qpcc@ichec.ie
 description: ICHEC lecture notes, quizes
-relative_url: true
+
 #url:              'https://sighingnow.github.io'
 #baseurl:          '/jekyll-gitbook'
 #baseurl:          '/quiz'
