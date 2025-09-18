@@ -5,8 +5,8 @@ author:           ICHEC Quantum Team
 email:            qpcc@ichec.ie
 description: ICHEC lecture notes, quizes
 
-url:              'https://ichec.github.io'
-baseurl:          '/quiz'
+# url:              'https://ichec.github.io/quiz'
+# baseurl:          '/'
 theme: minima
 
 # bootstrap: use the remote theme for the site itself
@@ -29,6 +29,7 @@ markdown:         kramdown
 exclude:
   - _drafts
   - scratch
+  - README.md
 
 include:
   - assets/quizzes
