@@ -1,7 +1,7 @@
 const FORM_ENDPOINT = "https://formspree.io/f/xovnoekr"; // "https://formspree.io/f/----";
 
 async function loadQuizFile(file) {
-  const r = await fetch(file);
+  const r = await fetch(window.QUIZ_FILE);
   return await r.text();
 }
 
