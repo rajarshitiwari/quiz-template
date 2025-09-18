@@ -5,10 +5,8 @@ author:           ICHEC Quantum Team
 email:            qpcc@ichec.ie
 description: ICHEC lecture notes, quizes
 
-#url:              'https://sighingnow.github.io'
-#baseurl:          '/jekyll-gitbook'
-#baseurl:          '/quiz'
-#rss:              RSS
+url:              'https://ichec.github.io'
+baseurl:          '/quiz'
 theme: minima
 
 # bootstrap: use the remote theme for the site itself
@@ -27,27 +25,6 @@ markdown_ext: md
 
 # markdown render engine.
 markdown:         kramdown
-#kramdown:
-#  auto_ids:               true
-#  input:                  GFM
-#  math_engine:            mathjax
-#  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-#  toc_levels:             1..6
-#  syntax_highlighter:     rouge
-#  syntax_highlighter_opts:
-#    guess_lang:           true
-
-#syntax_highlighter_style: colorful
-
-#toc:
-#  enabled: true
-
-# Permalinks
-# permalink:                /:categories/:year-:month-:day-:title:output_ext
-# permalink:                /:slugified_categories/:year-:month-:day-:title:output_ext
-
-# Disqus comments
-# disqushandler:            sighingnow
 
 exclude:
   - _drafts
@@ -56,21 +33,13 @@ exclude:
 include:
   - assets/quizzes
 
-#collections:
-#  pages:
-#    output: true
-#    permalink: /:collection/:path/
 
 collections:
   quizzes:
     output: true
 #    permalink: /quizzes/:name
 
-
-#page_width: 1200px
-
 destination:      ./_site
-#incremental:      false
 regenerate:       true
 
 plugins:
@@ -78,9 +47,4 @@ plugins:
   - jekyll-readme-index
   - jekyll-relative-links
   - jemoji
-  - jekyll-toc
   - jekyll-youtube
-
-
-#syntax_highlighter_style: colorful
-#highlighter: coderay
