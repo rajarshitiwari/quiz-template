@@ -31,8 +31,8 @@ exclude:
   - scratch
   - README.md
 
-include:
-  - assets/quizzes
+#include:
+#  - assets/quizzes
 
 
 collections:
