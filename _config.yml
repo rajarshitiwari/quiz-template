@@ -12,7 +12,7 @@ theme: minima
 # bootstrap: use the remote theme for the site itself
 #remote_theme: sighingnow/jekyll-gitbook
 
-markdown_ext: md
+markdown_ext: mdx
 #, markdown,mkdown,mkdn,mkd,
 
 #toc:
