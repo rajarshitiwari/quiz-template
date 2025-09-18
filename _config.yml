@@ -44,7 +44,6 @@ regenerate:       true
 
 plugins:
   - jekyll-feed
-  - jekyll-readme-index
   - jekyll-relative-links
   - jemoji
   - jekyll-youtube
