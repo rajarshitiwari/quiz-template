@@ -53,10 +53,8 @@ exclude:
   - _drafts
   - scratch
 
-#include:
-#  - qpcc
-#  - pyqm
-#  - gitbook.md
+include:
+  - assets/quizzes
 
 #collections:
 #  pages:
