@@ -3,10 +3,11 @@ layout: default
 title: Course Quizzes
 ---
 
-# 📘 Course Quizzes
+<h1>📘 Course Quizzes</h1>
+<p>Welcome! Choose a quiz below:</p>
 
-Welcome! Choose a quiz below:
-
-- [Quiz 1](quiz-01.html)
-- [Quiz 2](quiz-02.html)
-- [Quiz 3](quiz-03.html)
+<ul>
+  {% raw %}{% for quiz in site.quizzes %}
+    <li><a href="{{ quiz.url | relative_url }}">{{ quiz.title }}</a></li>
+  {% endfor %}{% endraw %}
+</ul>
