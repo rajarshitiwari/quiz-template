@@ -48,3 +48,6 @@ plugins:
   - jekyll-relative-links
   - jemoji
   - jekyll-youtube
+
+titles_from_headings:
+  enabled: false
