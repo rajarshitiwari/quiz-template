@@ -25,7 +25,9 @@ jobs:
 
       - name: Build site
         run: bundle exec jekyll build --trace
-
+      - name: List site output
+        run: ls -R _site
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
