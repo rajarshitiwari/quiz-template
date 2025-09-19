@@ -38,7 +38,7 @@ include:
 collections:
   quizzes:
     output: true
-#    permalink: /quizzes/:name
+    permalink: /quizzes/:name
 
 destination:      ./_site
 regenerate:       true
