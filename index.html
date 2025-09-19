@@ -64,7 +64,7 @@ title: Course Quizzes
 
 <div class="quiz-grid">
   {% for quiz in site.quizzes %}
-    <a class="quiz-card" href="{{ quiz.url | relative_url }}" data-quizfile="{{ quiz.quizfile }}">
+    <a class="quiz-card" href="{{ quiz.url | relative_url }}" data-quizfile="{{ quiz.quizfile | relative_url }}">
       <h2>📘 {{ quiz.title }}</h2>
       <p>{{ quiz.description | default: "Based on lecture content" }}</p>
       <small class="q-count">Loading...</small>
