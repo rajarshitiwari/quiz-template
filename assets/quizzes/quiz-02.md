@@ -27,3 +27,9 @@
 - [x] Mango <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Not-gate-en.svg" width="120">
 - [ ] Carrot
 - [ ] Potato
+
+### Question 6 - Which of these planets are rocky?
+- [x] Earth
+- [ ] Jupiter
+- [x] Mars
+- [ ] Saturn

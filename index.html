@@ -3,12 +3,60 @@ layout: default
 title: Course Quizzes
 ---
 
+<style>
+  .quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .quiz-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .quiz-card:hover {
+    border-color: #0b74ff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+  }
+
+  .quiz-card a {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #0b74ff;
+    text-decoration: none;
+  }
+
+  .quiz-card a:hover {
+    text-decoration: underline;
+  }
+
+.quiz-card small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #777;
+}
+</style>
+
 
 <h1>📘 Course Quizzes</h1>
 <p>Welcome! Choose a quiz below:</p>
 
-<ul>
-  <li><a href="{{ '/quiz-01.html' | relative_url }}">Quiz 1</a></li>
-  <li><a href="{{ '/quiz-02.html' | relative_url }}">Quiz 2</a></li>
-  <li><a href="{{ '/quiz-03.html' | relative_url }}">Quiz 3</a></li>
-</ul>
+<div class="quiz-grid">
+  {% for quiz in site.quizzes %}
+    <a class="quiz-card" href="{{ quiz.url | relative_url }}">
+      <h2>📘 Quiz {{ forloop.index }}</h2>
+      <p>{{ quiz.description | default: "Based on lecture content" }}</p>
+      <small>{{ quiz.questions | default: "?" }} questions</small>
+    </a>
+  {% endfor %}
+</div>

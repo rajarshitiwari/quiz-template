@@ -61,6 +61,10 @@ function renderQuiz(qs) {
     b.appendChild(ul);
     root.appendChild(b);
   });
+  // Re-typeset math after injecting content
+  if (window.MathJax) {
+    MathJax.typesetPromise();
+  }
 }
 
 function collectAnswers(qs) {
