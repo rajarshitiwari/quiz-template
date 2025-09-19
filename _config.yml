@@ -1,24 +1,16 @@
 # Configurations
-title:            ICHEC Quiz
-longtitle:        ICHEC Web Quiz setup
-author:           ICHEC Quantum Team
-email:            qpcc@ichec.ie
-description: ICHEC lecture notes, quizes
+title:            Quiz Template
+longtitle:        Web Quiz setup
+author:           Rajarshi Tiwari
+email:            rajarshi.tiwari@ichec.ie
+description: Generating quizzes for learning
 
-url:              'https://ichec.github.io'
-baseurl:          '/quiz'
+url:              'https://rajarshitiwari.github.io'
+baseurl:          '/quiz-template'
 theme: minima
 
-# bootstrap: use the remote theme for the site itself
-#remote_theme: sighingnow/jekyll-gitbook
-
 markdown_ext: md
-#, markdown,mkdown,mkdn,mkd,
 
-#toc:
-#  enabled: true
-#  h_min: 1
-#  h_max: 4
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 # favicon_path:     /assets/gitbook/images/favicon.ico
