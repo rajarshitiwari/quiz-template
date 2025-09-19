@@ -6,6 +6,7 @@ body {
   padding: 12px;
   background: #f9fafb;
   color: #111827;
+  font-size: large;
 }
 
 h1 {
@@ -35,8 +36,8 @@ h1 {
   background: #abd68f;
   border: 3px solid #e5e7eb;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
 }
 .q-title {
@@ -63,5 +64,5 @@ h1 {
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
-  font-size:
+  font-size: 18pt
 }
