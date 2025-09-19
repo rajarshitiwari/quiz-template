@@ -60,10 +60,3 @@ title: Course Quizzes
     </a>
   {% endfor %}
 </div>
-
-<p>Found {{ site.quizzes | size }} quizzes</p>
-<ul>
-  {% for quiz in site.quizzes %}
-    <li>{{ quiz.path }}</li>
-  {% endfor %}
-</ul>
